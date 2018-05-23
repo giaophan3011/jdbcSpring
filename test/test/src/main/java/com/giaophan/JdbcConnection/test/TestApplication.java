@@ -26,5 +26,8 @@ public class TestApplication implements CommandLineRunner{
 	@Override
 	public void run (String...args) throws Exception{
 		logger.info("all user --> {}", dao.getAllPerson());
+		logger.info("userbyid 1 --> {}", dao.getPersonById(2));
+		System.out.println(dao.getPersonById(2));
+		logger.info("deleted Row --> {}", dao.deletePersonById("Timi"));
 	}
 }
